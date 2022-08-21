@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(header_middleware)
 const directory = path.join(__dirname, './images');
 app.use("/images", express.static(directory));
-// app.use("/", express.static(path.join(__dirname, 'angular')));
+app.use("/", express.static(path.join(__dirname, 'angular')));
 
 app.use("/api/posts", postRouter)
 app.use("/api/user", userRoutes);
